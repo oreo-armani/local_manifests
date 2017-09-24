@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  
+  <remove-project path="bionic" name="LineageOS/android_bionic" groups="pdk" />
+  <remove-project path="build" name="LineageOS/android_build" groups="pdk" />
+
+  <remove-project path="frameworks/av" name="LineageOS/android_frameworks_av" groups="pdk" />
+  <remove-project path="frameworks/native" name="LineageOS/android_frameworks_native" groups="pdk" />
+  <remove-project path="packages/services/Telephony" name="LineageOS/android_packages_services_Telephony" groups="pdk" />
+  <remove-project path="hardware/lineage/interfaces" name="LineageOS/android_hardware_lineage_interfaces" />
+  <remove-project path="system/core" name="LineageOS/android_system_core" groups="pdk" />
+  <remove-project path="system/sepolicy" name="LineageOS/android_system_sepolicy" groups="pdk" />
+  <remove-project path="system/qcom" name="LineageOS/android_system_qcom" groups="pdk" />
+  <remove-project path="vendor/lineage" name="LineageOS/android_vendor_lineage" groups="pdk" />   
+  
+  <project path="build/make" name="oreo-armani/android_build" revision="lineage-15.0" remote="github" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+
+  <project path="bionic" name="oreo-armani/android_bionic" revision="lineage-15.0" remote="github"/>
+  <project path="frameworks/av" name="oreo-armani/android_frameworks_av" revision="lineage-15.0" remote="github"/>
+  <project path="frameworks/native" name="oreo-armani/android_frameworks_native" revision="lineage-15.0" remote="github"/>
+
+  <project path="packages/services/Telephony" name="oreo-armani/android_packages_services_Telephony" revision="lineage-15.0" remote="github"/>
+  <project path="hardware/lineage/interfaces" name="oreo-armani/android_hardware_lineage_interfaces" revision="lineage-15.0" remote="github"/>  
+  <project path="system/core" name="oreo-armani/android_system_core" revision="lineage-15.0" remote="github"/>
+  <project path="system/qcom" name="oreo-armani/android_system_qcom" revision="lineage-15.0" remote="github"/>
+  <project path="system/sepolicy" name="oreo-armani/android_system_sepolicy" revision="lineage-15.0" remote="github"/>
+  
+  <project path="vendor/lineage" name="oreo-armani/android_vendor_lineage" revision="lineage-15.0" remote="github"/>
+</manifest>
